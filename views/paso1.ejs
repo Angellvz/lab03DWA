@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrícula de cursos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Selecciona el curso</h1>
+  <form method="post" action="/paso2">
+    <label for="curso">Curso:</label>
+    <select name="curso" id="curso">
+      <% cursos.forEach(curso => { %>
+        <option value="<%= curso.id %>"><%= curso.nombre %></option>
+      <% }); %>
+    </select>
+    <button type="submit">Siguiente</button>
+  </form>
+</body>
+</html>

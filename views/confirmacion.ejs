@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmación de matrícula</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Confirmación de matrícula</h1>
+  <p><strong>Curso:</strong> <%= curso.nombre %></p>
+  <p><strong>Módulos:</strong></p>
+  <ul>
+    <% modulos.forEach(modulo => { %>
+      <li><%= modulo %></li>
+    <% }); %>
+  </ul>
+  <p><strong>Forma de pago:</strong> <%= formaPago %></p>
+  <p><strong>Total a pagar:</strong> S/ <%= total.toFixed(2) %></p>
+</body>
+</html>

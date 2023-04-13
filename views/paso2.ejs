@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrícula de cursos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Selecciona los módulos que llevarás</h1>
+  <form method="post" action="/paso3">
+    <ul>
+      <% modulos.forEach(modulo => { %>
+        <li>
+          <input type="checkbox" name="modulos" value="<%= modulo.id %>">
+          <%= modulo.nombre %> (<%= modulo.precio %>)
+        </li>
+      <% }); %>
+    </ul>
+    <button type="submit">Siguiente</button>
+  </form>
+</body>
+</html>
